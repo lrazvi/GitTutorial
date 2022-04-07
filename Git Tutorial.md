@@ -8,12 +8,16 @@ If you don't have it installed, it will prompt you to install it.
 
 __Getting a Repository__
 _Initializing_
+Initializing creates a new Git repository. It can convert an existing, unversioned project to a Git repository or initialize a new, empty repository.
+
 To initialize a repository in an existing directory, first go to the project's directory
 `$ cd /Users/user/projectdirectory`
 and then type
 `$ git init`
 
 _Cloning_
+Cloning a repository targets an existing repository and create a clone, or copy of the target repository.
+
 To clone an existing repository, enter the command:
 `$ git clone <url>`
 
@@ -22,6 +26,12 @@ And to clone a repository into a specific directory enter
 
 ___
 Files in your working directory are either tracked or untracked, with tracked files being the files that Git knows about. Tracked files can be unmodified, modified, or staged.
+
+_Staging_
+A staging step in git allows you to continue making changes to the working directory and allows you to record changes in small commits.
+
+_Commit_
+Commits can be thought of as snapshots or milestones along the timeline of a Git project.
 
 Untracked files are everything else in your working directory that have not been staged.
 
@@ -45,6 +55,8 @@ The `git add` command is multipurposed and can be used to track new files and st
    `$ git commit`
 
 __Branching__
+Git branches are effectively a pointer to a snapshot of your changes. When you want to add a new feature or fix a bug—no matter how big or how small—you spawn a new branch to encapsulate your changes.
+
 To create a branch run
 `$ git branch newbranch`
 And to check which branch you are currently on, run
@@ -67,6 +79,8 @@ You can delete a branch with the command
 `$ git branch -d branchname`
 
 __Merging__
+Git merging combines sequences of commits into one unified history of commits.
+
 To merge two branches, you have to check and switch to which branch you want to merge into and run the following command Ex: if you want to merge newbranch into the master branch
 ```
 $ git checkout master
